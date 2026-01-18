@@ -1,10 +1,3 @@
-"""
-Dashboard App URLs
-=================
-
-Maps dashboard URLs to views
-"""
-
 from django.urls import path
 from . import views
 
