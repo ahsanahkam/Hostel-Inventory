@@ -1,17 +1,73 @@
+/**
+ * =============================================================================
+ * GLOBAL CSS STYLES - Base Styling for the Application
+ * =============================================================================
+ * 
+ * PURPOSE:
+ * This file contains global CSS styles that apply to the entire application.
+ * It sets up basic styling like fonts, margins, and box-sizing.
+ * 
+ * WHAT IS GLOBAL CSS?
+ * Global CSS defines styles that apply to all pages and components.
+ * It's imported once in index.js and affects the whole app.
+ * 
+ * CONTENTS:
+ * 1. Body styles - Default font, margin reset
+ * 2. Code element styles - Monospace font for code blocks
+ * 3. Universal box-sizing - Makes width calculations easier
+ * 
+ * =============================================================================
+ */
+
+/**
+ * BODY ELEMENT STYLES
+ * These styles apply to the <body> element (the whole visible page)
+ */
 body {
+    /* Remove default browser margin */
     margin: 0;
+    
+    /* Font stack - browser uses first available font
+     * -apple-system: Apple devices
+     * BlinkMacSystemFont: Chrome on macOS
+     * 'Segoe UI': Windows
+     * 'Roboto': Android
+     * ... fallback to sans-serif if none available */
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    
+    /* Font smoothing for cleaner text rendering */
+    -webkit-font-smoothing: antialiased;    /* Chrome, Safari */
+    -moz-osx-font-smoothing: grayscale;     /* Firefox on macOS */
 }
 
+/**
+ * CODE ELEMENT STYLES
+ * Styles for <code> elements (inline code snippets)
+ */
 code {
+    /* Monospace font stack for code */
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
         monospace;
 }
 
+/**
+ * UNIVERSAL BOX-SIZING
+ * The * selector targets ALL elements
+ * 
+ * box-sizing: border-box means:
+ * - Width and height INCLUDE padding and border
+ * - Makes sizing calculations much easier
+ * 
+ * Example:
+ * With border-box: An element with width: 100px, padding: 10px
+ * is still 100px total (padding is inside the 100px)
+ * 
+ * Without border-box: Same element would be 120px total
+ * (100px + 10px left padding + 10px right padding)
+ */
 * {
     box-sizing: border-box;
 }
+
